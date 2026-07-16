@@ -40,7 +40,7 @@
       #binding-cells = <0>;
       wait-ms = <30>;
       tap-ms = <30>;
-      bindings = <&kp GRAVE>, <&kp SPACE>;
+      bindings = <&kp NUBS>, <&kp SPACE>;
   };
   macro_btick: macro_btick {
       compatible = "zmk,behavior-macro";
@@ -49,6 +49,38 @@
       wait-ms = <30>;
       tap-ms = <30>;
       bindings = <&kp LS(EQUAL)>, <&kp SPACE>;
+  };
+  macro_acute: macro_acute {
+      compatible = "zmk,behavior-macro";
+      label = "macro_acute";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp EQUAL>, <&kp SPACE>;
+  };
+  macro_tilde: macro_tilde {
+      compatible = "zmk,behavior-macro";
+      label = "macro_tilde";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RA(RBKT)>, <&kp SPACE>;
+  };
+  macro_opt9_d: macro_opt9_d {
+      compatible = "zmk,behavior-macro";
+      label = "macro_opt9_d";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RA(N9)>, <&kp D>;
+  };
+  macro_opt8_d: macro_opt8_d {
+      compatible = "zmk,behavior-macro";
+      label = "macro_opt8_d";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RA(N8)>, <&kp D>;
   };
   Win_Cut: Windows_Cut {
     compatible = "zmk,behavior-macro";
