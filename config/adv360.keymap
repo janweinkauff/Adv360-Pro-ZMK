@@ -28,21 +28,21 @@
     default_layer {
       display-name = "Base";
       bindings = <
-        &none       &kp N1  &kp N2  &kp N3    &kp N4    &kp N5  &none                                                           &mo 1  &kp N6  &kp N7     &kp N8   &kp N9    &kp N0    &none
-        &kp DELETE  &kp Q   &kp W   &kp E     &kp R     &kp T   &none                                                           &none  &kp Y   &kp U      &kp I    &kp O     &kp P     &kp LBKT
-        &kp BSPC    &kp A   &kp S   &kp D     &kp F     &kp G   &none           &kp LCTRL &kp LALT &kp LGUI &kp RCTRL           &none  &kp H   &kp J      &kp K    &kp L     &kp SEMI  &kp SQT
-        &kp LSHFT   &kp Z   &kp X   &kp C     &kp V     &kp B                             &kp HOME &kp END                      &kp N  &kp M   &kp COMMA  &kp DOT  &kp FSLH  &sl 2
-        &mo 3       &none   &mo 4   &kp LEFT  &sl 2                    &kp SPACE &kp TAB &kp PG_DN &kp PG_UP &kp ESC &kp ENTER  &none  &none   &none      &none    &mo 3
+        &none       &kp N1  &kp N2  &kp N3    &kp N4    &kp N5  &none                                                           &mo 1        &kp N6    &kp N7     &kp N8   &kp N9    &kp N0    &kp MINUS
+        &kp DELETE  &kp Q   &kp W   &kp E     &kp R     &kp T   &none                                                           &none        &kp Y     &kp U      &kp I    &kp O     &kp P     &kp LBKT
+        &kp BSPC    &kp A   &kp S   &kp D     &kp F     &kp G   &none           &kp LCTRL &kp LALT &kp LGUI &kp RCTRL           &none        &kp H     &kp J      &kp K    &kp L     &kp SEMI  &kp SQT
+        &kp LSHFT   &kp Z   &kp X   &kp C     &kp V     &kp B                             &kp HOME &kp END                      &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &sl 2
+        &mo 3       &none   &mo 4   &kp LEFT  &sl 2                    &kp SPACE &kp TAB &kp PG_DN &kp PG_UP &kp ESC &kp ENTER  &slash_bslh  &vim_cmd  &none      &none    &mo 3
       >;
     };
     mod {
       display-name = "Mod";
       bindings = <
-        &none           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                            &mo 1         &none       &none  &none  &none  &none  &none
-        &none           &none         &none         &none         &none         &none         &bootloader                                                      &bootloader   &none       &none  &none  &none  &none  &none
-        &studio_unlock  &none         &none         &none         &none         &none         &none              &none &none &bt BT_CLR &none                  &stp STP_BAT  &none       &none  &none  &none  &none  &none
-        &none           &none         &none         &none         &macro_ver    &none                                  &none &none                             &none         &none       &none  &none  &none  &none
-        &none           &none         &none         &none         &none                                    &none &none &none &none &bl BL_TOG &rgb_ug RGB_TOG  &bl BL_INC    &bl BL_DEC  &none  &none  &none
+        &none           &kvm1  &kvm2  &kvm3  &kvm4          &none          &none                                                       &mo 1         &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
+        &none           &none  &none  &none  &none          &kvm_key_mode  &bootloader                                                 &bootloader   &none  &none  &none  &none  &none  &none
+        &studio_unlock  &none  &none  &none  &kvm_fan_mode  &none          &none         &bt BT_CLR &none &none &bt BT_CLR_ALL         &stp STP_BAT  &none  &none  &none  &none  &none  &none
+        &none           &none  &none  &none  &macro_ver     &none                                   &none &none                        &none         &none  &none  &none  &none  &none
+        &none           &none  &none  &none  &none                                      &none &none &none &none &none &rgb_ug RGB_TOG  &none         &none  &none  &none  &none
       >;
     };
     special {
@@ -62,17 +62,17 @@
         &none   &none      &none      &none      &kp LG(R)      &none              &none                                             &kp LG(Q)  &kp LG(W)        &kp LG(Y)     &kp LG(LS(Y))  &none              &kp LG(LC(LA(P)))  &kp LG(P)
         &none   &kp LG(A)  &kp LG(S)  &none      &kp LG(SPACE)  &kp LG(F)          &none           &none &none &none &none           &none      &kp LG(LC(LEFT)) &kp TAB       &kp LGUI       &kp LG(LC(RIGHT))  &none              &none
         &none   &none      &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(LA(LS(V)))                        &none &none                 &kp LG(T)  &none            &none         &none          &none              &none
-        &mo 3   &none      &none      &none      &none                                    &trans &trans &trans &trans &trans &trans  &none      &kp LG(RBKT)     &kp LG(FSLH)  &none          &mo 3
+        &mo 3   &none      &none      &none      &mo 4                                    &trans &trans &trans &trans &trans &trans  &none      &kp LG(RBKT)     &kp LG(FSLH)  &none          &mo 3
       >;
     };
     tmuxvim {
       display-name = "Tmux & Vim";
       bindings = <
-        &none  &none  &none          &none          &none          &none  &none                                       &mo 1  &none   &none   &none   &none   &none   &none
-        &none  &none  &kp LC(LS(W))  &none          &none          &none  &none                                       &none  &none   &none   &none   &none   &none   &none
-        &none  &none  &none          &none          &none          &none  &none        &none &none &none &none        &none  &none   &none   &none   &none   &none   &none
-        &none  &none  &none          &kp LC(A)      &kp LC(E)      &none                     &none &none              &none  &none   &none   &none   &none   &none
-        &mo 3  &none  &none          &macro_opt9_d  &macro_opt8_d                &none &none &none &none &none &none  &none  &none   &none   &none   &mo 3
+        &none  &none  &none          &none          &none          &none  &none                                       &mo 1  &none           &none                &none            &none            &none  &none
+        &none  &none  &kp LC(LS(W))  &none          &none          &none  &none                                       &none  &none           &none                &tmux_copy_mode  &none            &none  &none
+        &none  &none  &none          &none          &none          &none  &none        &none &none &none &none        &none  &tmux_win_left  &vim_cmd             &tmux_leader     &tmux_win_right  &none  &none
+        &none  &none  &none          &kp LC(A)      &kp LC(E)      &none                     &none &none              &none  &none           &tmux_sessions_list  &none            &none            &none
+        &mo 3  &none  &none          &macro_opt9_d  &macro_opt8_d                &none &none &none &none &none &none  &none  &none           &none                &none            &mo 3
       >;
     };
     extra1 { 

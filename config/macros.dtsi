@@ -1,3 +1,10 @@
+  slash_bslh: slash_bslh {
+    compatible = "zmk,behavior-mod-morph";
+    label = "slash_bslh";
+    #binding-cells = <0>;
+    bindings = <&kp LS(N7)>, <&kp RA(MINUS)>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+  };
   macro_quotes: macro_quotes {
     compatible = "zmk,behavior-macro";
     label = "macro_quotes";
@@ -81,6 +88,102 @@
       wait-ms = <30>;
       tap-ms = <30>;
       bindings = <&kp RA(N8)>, <&kp D>;
+  };
+  kvm1: kvm1 {
+      compatible = "zmk,behavior-macro";
+      label = "kvm1";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RCTRL>, <&kp RCTRL>, <&kp N1>;
+  };
+  kvm2: kvm2 {
+      compatible = "zmk,behavior-macro";
+      label = "kvm2";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RCTRL>, <&kp RCTRL>, <&kp N2>;
+  };
+  kvm3: kvm3 {
+      compatible = "zmk,behavior-macro";
+      label = "kvm3";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RCTRL>, <&kp RCTRL>, <&kp N3>;
+  };
+  kvm4: kvm4 {
+      compatible = "zmk,behavior-macro";
+      label = "kvm4";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RCTRL>, <&kp RCTRL>, <&kp N4>;
+  };
+  kvm_key_mode: kvm_key_mode {
+      compatible = "zmk,behavior-macro";
+      label = "kvm_key_mode";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RCTRL>, <&kp RCTRL>, <&kp F2>;
+  };
+  kvm_fan_mode: kvm_fan_mode {
+      compatible = "zmk,behavior-macro";
+      label = "kvm_fan_mode";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RCTRL>, <&kp RCTRL>, <&kp F3>;
+  };
+  tmux_copy_mode: tmux_copy_mode {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_copy_mode";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LC(SPACE)>, <&kp RA(N8)>;
+  };
+  tmux_win_left: tmux_win_left {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_win_left";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RA(LEFT)>;
+  };
+  tmux_win_right: tmux_win_right {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_win_right";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp RA(RIGHT)>;
+  };
+  tmux_leader: tmux_leader {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_leader";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LC(SPACE)>;
+  };
+  vim_cmd: vim_cmd {
+      compatible = "zmk,behavior-macro";
+      label = "vim_cmd";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LS(DOT)>;
+  };
+  tmux_sessions_list: tmux_sessions_list {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_sessions_list";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LC(SPACE)>, <&kp S>;
   };
   Win_Cut: Windows_Cut {
     compatible = "zmk,behavior-macro";
