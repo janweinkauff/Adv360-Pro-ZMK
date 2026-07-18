@@ -28,11 +28,11 @@
     default_layer {
       display-name = "Base";
       bindings = <
-        &none       &kp N1  &kp N2  &kp N3  &kp N4    &kp N5  &none                                                           &mo 1        &kp N6    &kp N7     &kp N8   &kp N9    &kp N0    &kp MINUS
-        &kp DELETE  &kp Q   &kp W   &kp E   &kp R     &kp T   &none                                                           &none        &kp Y     &kp U      &kp I    &kp O     &kp P     &kp LBKT
-        &kp BSPC    &kp A   &kp S   &kp D   &kp F     &kp G   &none           &kp LCTRL &kp LALT &kp LGUI &kp RCTRL           &none        &kp H     &kp J      &kp K    &kp L     &kp SEMI  &kp SQT
-        &kp LSHFT   &kp Z   &kp X   &kp C   &kp V     &kp B                             &kp HOME &kp END                      &kp N        &kp M     &kp COMMA  &kp DOT  &kp FSLH  &sl 2
-        &mo 3       &mo 4   &none   &none   &sl 2                    &kp SPACE &kp TAB &kp PG_DN &kp PG_UP &kp ESC &kp ENTER  &slash_bslh  &vim_cmd  &none      &mo 4    &mo 3
+        &none       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none                                                           &mo 1  &kp N6  &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS
+        &kp DELETE  &kp Q   &kp W   &kp E   &kp R   &kp T   &none                                                           &none  &kp Y   &kp U    &kp I      &kp O    &kp P     &kp LBKT
+        &kp BSPC    &kp A   &kp S   &kp D   &kp F   &kp G   &none           &kp LCTRL &kp LALT &kp LGUI &kp RCTRL           &none  &kp H   &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
+        &kp LSHFT   &kp Z   &kp X   &kp C   &kp V   &kp B                             &kp HOME &kp END                             &kp N   &kp M    &kp COMMA  &kp DOT  &kp FSLH  &sl 5
+        &mo 3       &mo 4   &mo 6   &none   &sl 5                  &kp SPACE &kp TAB &kp PG_DN &kp PG_UP &kp ESC &kp ENTER                 &kp TAB  &none      &mo 6    &mo 4     &mo 3
       >;
     };
     mod {
@@ -58,31 +58,41 @@
     navigation {
       display-name = "Navigation";
       bindings = <
-        &kp F1  &kp F2     &kp F3     &kp F4     &kp F5         &kp F6             &none                                             &mo 1         &kp F7           &kp F8        &kp F9         &kp F10            &kp F11            &kp F12
-        &none   &none      &none      &none      &kp LG(R)      &none              &none                                             &kp LG(Q)     &kp LG(W)        &kp LG(Y)     &kp LG(LS(Y))  &none              &kp LG(LC(LA(P)))  &kp LG(P)
-        &none   &kp LG(A)  &kp LG(S)  &none      &kp LG(SPACE)  &kp LG(F)          &none           &none &none &none &none           &none         &kp LG(LC(LEFT)) &kp TAB       &kp LGUI       &kp LG(LC(RIGHT))  &none              &none
-        &none   &none      &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(LA(LS(V)))                        &none &none                 &kp LG(T)     &kp LEFT         &kp DOWN      &kp UP         &kp RIGHT          &none
-        &mo 3   &none      &none      &none      &mo 4                                    &trans &trans &trans &trans &trans &trans  &kp LG(LS(T)) &kp LG(RBKT)     &kp LG(FSLH)  &none          &mo 3
+        &kp F1  &kp F2     &kp F3     &kp F4     &kp F5         &kp F6             &none                                                                  &mo 1      &kp F7     &kp F8     &kp F9         &kp F10       &kp F11            &kp F12
+        &none   &none      &none      &none      &kp LG(R)      &none              &none                                                                  &kp LG(Q)  &kp LG(W)  &kp LG(Y)  &kp LG(LS(Y))  &none         &kp LG(LC(LA(P)))  &kp LG(P)
+        &none   &kp LG(A)  &kp LG(S)  &none      &kp LG(SPACE)  &kp LG(F)          &none                     &none &none &none &none                      &none      &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT     &none              &none
+        &none   &none      &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(LA(LS(V)))                                  &none &none                                       &none      &kp TAB    &kp LGUI       &none         &none              &none
+        &mo 3   &none      &none      &none      &mo 4                                    &kp LG(LC(LEFT)) &trans &trans &trans &trans &kp LG(LC(RIGHT))                        &kp LG(T)  &kp LG(LS(T))  &kp LG(RBKT)  &kp LG(FSLH)       &mo 3
       >;
     };
     tmuxvim {
       display-name = "Tmux & Vim";
       bindings = <
-        &none  &none  &none          &none          &none          &none  &none                                       &mo 1  &none           &none                &none            &none            &none  &none
-        &none  &none  &kp LC(LS(W))  &none          &none          &none  &none                                       &none  &none           &none                &tmux_copy_mode  &none            &none  &none
-        &none  &none  &none          &none          &none          &none  &none        &none &none &none &none        &none  &tmux_win_left  &vim_cmd             &tmux_leader     &tmux_win_right  &none  &none
-        &none  &none  &none          &kp LC(A)      &kp LC(E)      &none                     &none &none              &none  &none           &tmux_sessions_list  &none            &none            &none
-        &mo 3  &none  &none          &macro_opt9_d  &macro_opt8_d                &none &none &none &none &none &none  &none  &none           &none                &none            &mo 3
+        &none  &none  &none          &none          &none          &none      &none                                                          &mo 1  &none      &none         &none                &none      &none  &none
+        &none  &none  &kp LC(LS(W))  &none          &kp LC(R)      &none      &none                                                          &none  &none      &kp LC(U)     &tmux_copy_mode      &kp LC(O)  &none  &none
+        &none  &none  &none          &kp LC(D)      &none          &none      &none                 &none &none &none &none                  &none  &kp LC(H)  &kp LC(J)     &kp LC(K)            &kp LC(L)  &none  &none
+        &none  &none  &none          &kp LC(C)      &kp LC(V)      &kp LC(B)                              &none &none                               &none      &tmux_leader  &tmux_sessions_list  &none      &none  &none
+        &mo 3  &none  &none          &macro_opt9_d  &macro_opt8_d                    &tmux_win_left &none &none &none &none &tmux_win_right                    &kp LC(A)     &kp LC(E)            &none      &none  &mo 3
       >;
     };
     prog {
       display-name = "Programming";
       bindings = <
-        &none      &none         &none          &none         &none        &none         &none                                                              &mo 1     &none          &none          &none       &none         &none         &none
-        &none      &kp RA(Q)     &kp LS(N1)     &kp LS(RBKT)  &kp LS(N5)   &macro_caret  &none                                                              &none     &kp RA(E)      &kp RA(MINUS)  &kp LS(N7)  &macro_acute  &macro_btick  &none
-        &kp BSPC   &kp NUHS      &kp LS(MINUS)  &kp LS(N0)    &kp LS(DOT)  &kp LS(N4)    &none          &kp LCTRL  &kp LALT  &kp LGUI  &kp RCTRL            &none     &kp RA(GRAVE)  &kp LS(N8)     &kp LS(N9)  &kp RA(N7)    &kp RA(N0)    &none
-        &kp LSHFT  &macro_tilde  &kp GRAVE      &kp RBKT      &kp LS(N6)   &none                                   &kp HOME  &kp END                        &kp FSLH  &kp RA(N8)     &kp RA(N9)     &kp LS(N2)  &kp LS(NUHS)  &none
-        &mo 3      &none         &none          &none         &none                           &kp SPACE  &kp TAB  &kp PG_DN  &kp PG_UP  &kp ESC  &kp ENTER  &none     &none          &none          &none       &none
+        &none      &none         &none          &none         &none        &none         &none                                                              &mo 1     &none          &none          &none         &none       &none          &none
+        &none      &kp RA(Q)     &kp LS(N1)     &kp LS(RBKT)  &kp LS(N5)   &macro_caret  &none                                                              &none     &kp RA(E)      &kp RA(MINUS)  &kp LS(N7)    &kp GRAVE   &kp LS(GRAVE)  &none
+        &kp BSPC   &kp NUHS      &kp LS(MINUS)  &kp LS(N0)    &kp LS(DOT)  &kp LS(N4)    &none          &kp LCTRL  &kp LALT  &kp LGUI  &kp RCTRL            &none     &kp RA(GRAVE)  &kp LS(N8)     &kp LS(N9)    &kp RA(N7)  &kp RA(N0)     &none
+        &kp LSHFT  &macro_tilde  &kp GRAVE      &kp RBKT      &kp LS(N6)   &none                                   &kp HOME  &kp END                                  &kp FSLH       &kp RA(N8)     &kp RA(N9)    &kp LS(N2)  &kp LS(NUHS)   &none
+        &mo 3      &none         &none          &none         &none                           &kp SPACE  &kp TAB  &kp PG_DN  &kp PG_UP  &kp ESC  &kp ENTER                           &macro_acute   &macro_btick  &none       &none          &none
+      >;
+    };
+    app {
+      display-name = "Application";
+      bindings = <
+        &none  &none  &none  &none  &none  &none  &none                                           &mo 1     &none     &none     &none   &none      &none  &none
+        &none  &none  &none  &none  &none  &none  &none                                           &none     &none     &none     &none   &none      &none  &none
+        &none  &none  &none  &none  &none  &none  &none         &none  &none  &none  &none        &none     &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &none  &none
+        &none  &none  &none  &none  &none  &none                       &none  &none                         &none     &none     &none   &none      &none  &none
+        &none  &none  &none  &none  &none                &none  &none  &none  &none  &none &none                      &none     &none   &none      &none  &none
       >;
     };
     extra1 { 
