@@ -58,21 +58,21 @@
     navigation {
       display-name = "Navigation";
       bindings = <
-        &kp F1  &kp F2     &kp F3     &kp F4     &kp F5         &kp F6             &none                                                                  &mo 1      &kp F7     &kp F8     &kp F9         &kp F10       &kp F11            &kp F12
-        &none   &none      &none      &none      &kp LG(R)      &none              &none                                                                  &kp LG(Q)  &kp LG(W)  &kp LG(Y)  &kp LG(LS(Y))  &none         &kp LG(LC(LA(P)))  &kp LG(P)
-        &none   &kp LG(A)  &kp LG(S)  &none      &kp LG(SPACE)  &kp LG(F)          &none                     &none &none &none &none                      &none      &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT     &none              &none
-        &none   &none      &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(LA(LS(V)))                                  &none &none                                       &none      &kp TAB    &kp LGUI       &none         &none              &none
-        &mo 3   &none      &none      &none      &mo 4                                    &kp LG(LC(LEFT)) &trans &trans &trans &trans &kp LG(LC(RIGHT))                        &kp LG(T)  &kp LG(LS(T))  &kp LG(RBKT)  &kp LG(FSLH)       &mo 3
+        &kp F1  &kp F2     &kp F3     &kp F4     &kp F5         &kp F6             &none                                                                            &mo 1      &kp F7     &kp F8     &kp F9         &kp F10       &kp F11            &kp F12
+        &none   &none      &none      &none      &kp LG(R)      &none              &none                                                                            &kp LG(Q)  &kp LG(W)  &kp LG(Y)  &kp LG(LS(Y))  &none         &kp LG(LC(LA(P)))  &kp LG(P)
+        &none   &kp LG(A)  &kp LG(S)  &none      &kp LG(SPACE)  &kp LG(F)          &none                     &none &none &none &none                                &none      &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT     &none              &none
+        &none   &none      &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(LA(LS(V)))                                  &none &none                                                 &none      &kp TAB    &kp LGUI       &none         &none              &none
+        &mo 3   &none      &none      &none      &mo 4                                              &trans &trans &trans &trans &kp LG(LC(LEFT)) &kp LG(LC(RIGHT))                        &kp LG(T)  &kp LG(LS(T))  &kp LG(RBKT)  &kp LG(FSLH)       &mo 3
       >;
     };
     tmuxvim {
       display-name = "Tmux & Vim";
       bindings = <
-        &none  &none  &none          &none          &none          &none      &none                                                          &mo 1  &none      &none         &none                &none      &none  &none
-        &none  &none  &kp LC(LS(W))  &none          &kp LC(R)      &none      &none                                                          &none  &none      &kp LC(U)     &tmux_copy_mode      &kp LC(O)  &none  &none
-        &none  &none  &none          &kp LC(D)      &none          &none      &none                 &none &none &none &none                  &none  &kp LC(H)  &kp LC(J)     &kp LC(K)            &kp LC(L)  &none  &none
-        &none  &none  &none          &kp LC(C)      &kp LC(V)      &kp LC(B)                              &none &none                               &none      &tmux_leader  &tmux_sessions_list  &none      &none  &none
-        &mo 3  &none  &none          &macro_opt9_d  &macro_opt8_d                    &tmux_win_left &none &none &none &none &tmux_win_right                    &kp LC(A)     &kp LC(E)            &none      &none  &mo 3
+        &none  &none  &none          &none          &none          &none      &none                                                                   &mo 1  &none      &none         &none                &none      &none  &none
+        &none  &none  &kp LC(LS(W))  &none          &kp LC(R)      &none      &none                                                                   &none  &none      &kp LC(U)     &tmux_copy_mode      &kp LC(O)  &none  &none
+        &none  &none  &none          &kp LC(D)      &none          &none      &none                 &none &none &none &none                           &none  &kp LC(H)  &kp LC(J)     &kp LC(K)            &kp LC(L)  &none  &none
+        &none  &none  &none          &kp LC(C)      &kp LC(V)      &kp LC(B)                              &none &none                                        &none      &tmux_leader  &tmux_sessions_list  &none      &none  &none
+        &mo 3  &none  &none          &macro_opt9_d  &macro_opt8_d                             &none &none &none &none &tmux_win_left &tmux_win_right                    &kp LC(A)     &kp LC(E)            &none      &none  &mo 3
       >;
     };
     prog {
