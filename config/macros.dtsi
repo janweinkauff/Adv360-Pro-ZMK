@@ -73,17 +73,17 @@
       tap-ms = <30>;
       bindings = <&kp RA(RBKT)>, <&kp SPACE>;
   };
-  macro_opt9_d: macro_opt9_d {
+  vim_diag_next: vim_diag_next {
       compatible = "zmk,behavior-macro";
-      label = "macro_opt9_d";
+      label = "vim_diag_next";
       #binding-cells = <0>;
       wait-ms = <30>;
       tap-ms = <30>;
       bindings = <&kp RA(N9)>, <&kp D>;
   };
-  macro_opt8_d: macro_opt8_d {
+  vim_diag_prev: vim_diag_prev {
       compatible = "zmk,behavior-macro";
-      label = "macro_opt8_d";
+      label = "vim_diag_prev";
       #binding-cells = <0>;
       wait-ms = <30>;
       tap-ms = <30>;
@@ -184,6 +184,14 @@
       wait-ms = <30>;
       tap-ms = <30>;
       bindings = <&kp LC(SPACE)>, <&kp S>;
+  };
+  macro_emoji: macro_emoji {
+      compatible = "zmk,behavior-macro";
+      label = "macro_emoji";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LC(LG(SPACE))>;
   };
   Win_Cut: Windows_Cut {
     compatible = "zmk,behavior-macro";
