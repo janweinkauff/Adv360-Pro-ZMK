@@ -72,6 +72,7 @@
       wait-ms = <30>;
       tap-ms = <30>;
       bindings = <&kp RA(RBKT)>, <&kp SPACE>;
+      display-name = "~";
   };
   vim_diag_next: vim_diag_next {
       compatible = "zmk,behavior-macro";
@@ -143,7 +144,7 @@
       #binding-cells = <0>;
       wait-ms = <30>;
       tap-ms = <30>;
-      bindings = <&kp LC(SPACE)>, <&kp RA(N8)>;
+      bindings = <&tmux_leader>, <&kp RA(N8)>;
   };
   tmux_win_left: tmux_win_left {
       compatible = "zmk,behavior-macro";
@@ -151,7 +152,7 @@
       #binding-cells = <0>;
       wait-ms = <30>;
       tap-ms = <30>;
-      bindings = <&kp RA(LEFT)>;
+      bindings = <&kp LA(LEFT)>;
   };
   tmux_win_right: tmux_win_right {
       compatible = "zmk,behavior-macro";
@@ -159,7 +160,7 @@
       #binding-cells = <0>;
       wait-ms = <30>;
       tap-ms = <30>;
-      bindings = <&kp RA(RIGHT)>;
+      bindings = <&kp LA(RIGHT)>;
   };
   tmux_leader: tmux_leader {
       compatible = "zmk,behavior-macro";
@@ -183,7 +184,7 @@
       #binding-cells = <0>;
       wait-ms = <30>;
       tap-ms = <30>;
-      bindings = <&kp LC(SPACE)>, <&kp S>;
+      bindings = <&tmux_leader>, <&kp S>;
   };
   macro_emoji: macro_emoji {
       compatible = "zmk,behavior-macro";
@@ -192,6 +193,163 @@
       wait-ms = <30>;
       tap-ms = <30>;
       bindings = <&kp LC(LG(SPACE))>;
+  };
+  macro_open_reminders: macro_open_reminders {
+      compatible = "zmk,behavior-macro";
+      label = "macro_open_reminders";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(LA(LC(E)))>;
+  };
+  macro_open_1p: macro_open_1p {
+      compatible = "zmk,behavior-macro";
+      label = "macro_open_1p";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(LC(LA(P)))>;
+      display-name = "open 1password";
+  };
+  tmux_new_session: tmux_new_session {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_new_session";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&tmux_leader>, <&kp LS(DOT)>, <&kp N>, <&kp E>, <&kp W>, <&kp ENTER>;
+  };
+  tmux_new_window: tmux_new_window {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_new_window";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&tmux_leader>, <&kp C>;
+  };
+  tmux_hsplit: tmux_hsplit {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_hsplit";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&tmux_leader>, <&kp FSLH>;
+  };
+  tmux_vsplit: tmux_vsplit {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_vsplit";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&tmux_leader>, <&kp RA(GRAVE)>;
+  };
+  tmux_command: tmux_command {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_command";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&tmux_leader>, <&kp LS(DOT)>;
+  };
+  tmux_swap_window_left: tmux_swap_window_left {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_swap_window_left";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&tmux_leader>, <&kp LS(LEFT)>;
+      display-name = "Tmux: Swap Left Window";
+  };
+  tmux_swap_window_right: tmux_swap_window_right {
+      compatible = "zmk,behavior-macro";
+      label = "tmux_swap_window_right";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&tmux_leader>, <&kp LS(RIGHT)>;
+      display-name = "Tmux: Swap Right Window";
+  };
+  hypr_move_win_left: hypr_move_win_left {
+      compatible = "zmk,behavior-macro";
+      label = "hypr_move_win_left";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(H)>;
+      display-name = "Hyperland move to left window";
+  };
+  hypr_move_win_right: hypr_move_win_right {
+      compatible = "zmk,behavior-macro";
+      label = "hypr_move_win_right";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(L)>;
+      display-name = "Hyperland move to right window";
+  };
+  hypr_move_win_down: hypr_move_win_down {
+      compatible = "zmk,behavior-macro";
+      label = "hypr_move_win_down";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(J)>;
+      display-name = "Hyperland move to bottom window";
+  };
+  hypr_move_win_up: hypr_move_win_up {
+      compatible = "zmk,behavior-macro";
+      label = "hypr_move_win_up";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(K)>;
+      display-name = "Hyperland move to top window";
+  };
+  hypr_win_fullscreen: hypr_win_fullscreen {
+      compatible = "zmk,behavior-macro";
+      label = "hypr_move_win_fullscreen";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(F)>;
+      display-name = "Hyperland toggle fullscreen window";
+  };
+  hypr_win_toggle_split: hypr_win_toggle_split {
+      compatible = "zmk,behavior-macro";
+      label = "hypr_win_toggle_split";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(LS(J))>;
+      display-name = "Hyperland toggle window split";
+  };
+  hypr_win_toggle_float: hypr_win_toggle_float {
+      compatible = "zmk,behavior-macro";
+      label = "hypr_win_toggle_float";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(LS(V))>;
+      display-name = "Hyperland toggle window float";
+  };
+
+  screenshot_region: screenshot_region {
+      compatible = "zmk,behavior-macro";
+      label = "screenshot_region";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(LS(N4))>;
+      display-name = "screenshot region";
+  };
+  screenshot: screenshot {
+      compatible = "zmk,behavior-macro";
+      label = "screenshot";
+      #binding-cells = <0>;
+      wait-ms = <30>;
+      tap-ms = <30>;
+      bindings = <&kp LG(LS(N3))>;
+      display-name = "screenshot";
   };
   Win_Cut: Windows_Cut {
     compatible = "zmk,behavior-macro";

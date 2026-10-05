@@ -28,11 +28,11 @@
     default_layer {
       display-name = "Base";
       bindings = <
-        &none       &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none                                                           &mo 1  &kp N6  &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS
-        &kp DELETE  &kp Q   &kp W   &kp E   &kp R   &kp T   &none                                                           &none  &kp Y   &kp U    &kp I      &kp O    &kp P     &kp LBKT
-        &kp BSPC    &kp A   &kp S   &kp D   &kp F   &kp G   &none           &kp LCTRL &kp LALT &kp LGUI &kp RCTRL           &none  &kp H   &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
-        &kp LSHFT   &kp Z   &kp X   &kp C   &kp V   &kp B                             &kp HOME &kp END                             &kp N   &kp M    &kp COMMA  &kp DOT  &kp FSLH  &sl 2
-        &mo 3       &mo 4   &none   &none   &sl 2                  &kp SPACE &kp TAB &kp PG_DN &kp PG_UP &kp ESC &kp ENTER                 &kp TAB  &none      &none    &mo 4     &mo 3
+        &kp ESC     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &none                                                                       &mo 1  &kp N6  &kp N7  &kp N8  &kp N9      &kp N0   &kp MINUS
+        &kp DELETE  &kp Q   &kp W   &kp E   &kp R   &kp T   &screenshot                                                                 &none  &kp Y   &kp U   &kp I    &kp O      &kp P    &kp LBKT
+        &kp BSPC    &kp A   &kp S   &kp D   &kp F   &kp G   &screenshot_region           &kp LCTRL &kp LALT &kp LGUI &kp RCTRL                 &none   &kp H   &kp J    &kp K      &kp L    &kp SEMI  &kp SQT
+        &kp LSHFT   &kp Z   &kp X   &kp C   &kp V   &kp B                                         &kp HOME &kp END                                     &kp N   &kp M    &kp COMMA  &kp DOT  &kp FSLH  &kp TAB
+        &mo 3       &mo 4   &mo 5   &none   &sl 2                              &kp SPACE &kp TAB &kp PG_DN &kp PG_UP &kp ESC &kp ENTER                         &sl 2    &none      &mo 5    &mo 4     &mo 3
       >;
     };
     mod {
@@ -48,31 +48,41 @@
     prog {
       display-name = "Programming";
       bindings = <
-        &none      &none         &none          &none         &none        &none       &none                                                              &mo 1     &none          &none         &none         &none       &none          &none
-        &none      &kp RA(Q)     &kp LS(N1)     &kp LS(RBKT)  &kp LS(N5)   &none       &none                                                              &none     &kp RA(E)      &kp RA(N8)    &kp RA(N9)    &kp GRAVE   &kp LS(GRAVE)  &none
-        &kp BSPC   &kp NUHS      &kp LS(MINUS)  &kp LS(N0)    &kp LS(DOT)  &kp LS(N4)  &none            &kp LCTRL  &kp LALT  &kp LGUI  &kp RCTRL          &none     &kp RA(GRAVE)  &kp LS(N8)    &kp LS(N9)    &kp LS(N7)  &kp RA(MINUS)  &none
-        &kp LSHFT  &macro_tilde  &macro_caret   &kp RBKT      &kp LS(N6)   &none                                   &kp HOME  &kp END                                &kp FSLH       &kp RA(N7)    &kp RA(N0)    &kp LS(N2)  &kp LS(NUHS)   &none
-        &mo 3      &none         &none          &none         &none                           &kp SPACE  &kp TAB  &kp PG_DN  &kp PG_UP  &kp ESC  &kp ENTER                         &macro_btick  &macro_acute  &none       &none          &none
+        &kp F1     &kp F2        &kp F3         &kp F4        &kp F5       &kp F6      &none                                                                  &mo 1     &kp F7         &kp F8        &kp F9        &kp F10     &kp F11        &kp F12
+        &none      &kp RA(Q)     &kp LS(N1)     &kp LS(RBKT)  &kp LS(N5)   &none       &none                                                                  &none     &kp RA(E)      &kp RA(N8)    &kp RA(N9)    &kp GRAVE   &kp LS(GRAVE)  &none
+        &kp BSPC   &kp NUHS      &kp LS(MINUS)  &kp LS(N0)    &kp LS(DOT)  &kp LS(N4)  &none             &kp LCTRL  &kp LALT   &kp LGUI   &kp RCTRL           &none     &kp RA(GRAVE)  &kp LS(N8)    &kp LS(N9)    &kp LS(N7)  &kp RA(MINUS)  &none
+        &kp LSHFT  &macro_tilde  &macro_caret   &kp RBKT      &kp LS(N6)   &none                                    &kp HOME   &kp END                                  &kp FSLH       &kp RA(N7)    &kp RA(N0)    &kp LS(N2)  &kp LS(NUHS)   &none
+        &mo 3      &none         &none          &none         &none                           &kp SPACE  &kp TAB    &kp PG_DN  &kp PG_UP  &kp ESC  &kp ENTER                           &macro_btick  &macro_acute  &none       &none          &none
       >;
     };
     navigation {
       display-name = "Navigation";
       bindings = <
-        &kp F1  &kp F2     &kp F3     &kp F4     &kp F5         &kp F6             &none                                                                      &mo 1      &kp F7     &kp F8     &kp F9         &kp F10       &kp F11            &kp F12
-        &none   &none      &none      &none      &kp LG(R)      &none              &none                                                                      &kp LG(Q)  &kp LG(W)  &kp LG(Y)  &kp LG(LS(Y))  &none         &kp LG(LC(LA(P)))  &kp LG(P)
-        &none   &kp LG(A)  &kp LG(S)  &none      &kp LG(SPACE)  &kp LG(F)          &none               &none &none &none &none                                &none      &kp LEFT   &kp DOWN   &kp UP         &kp RIGHT     &none              &none
-        &none   &none      &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(LA(LS(V)))                            &none &none                                                 &none      &kp TAB    &kp LGUI       &none         &none              &none
-        &mo 3   &none      &none      &none      &mo 4                                    &macro_emoji &trans &trans &trans &kp LG(LC(LEFT)) &kp LG(LC(RIGHT))                         &kp LG(T)  &kp LG(LS(T))  &kp LG(RBKT)  &kp LG(FSLH)       &mo 3
+        &none   &kp LG(N1) &kp LG(N2) &kp LG(N3) &kp LG(N4)     &kp LG(N5)         &none                                                                        &mo 1          &kp LG(N6) &kp LG(N7)    &kp LG(N8)     &kp LG(N9)    &kp LG(N0)             &none
+        &none   &none      &none      &none      &kp LG(R)      &none              &none                                                                        &kp LG(Q)      &kp LG(W)  &kp LG(Y)     &kp LG(LS(Y))  &none         &macro_open_1p         &kp LG(P)
+        &none   &kp LG(A)  &kp LG(S)  &none      &kp LG(SPACE)  &kp LG(F)          &none               &none &none &none &none                                  &kp LS(LG(T))  &kp LEFT   &kp DOWN      &kp UP         &kp RIGHT     &macro_open_reminders  &none
+        &none   &none      &kp LG(X)  &kp LG(C)  &kp LG(V)      &kp LG(LA(LS(V)))                            &none &none                                                       &kp LG(T)  &kp TAB       &kp LGUI       &kp ESC       &none                  &none
+        &mo 3   &none      &none      &none      &mo 4                                    &macro_emoji &trans &trans &trans &kp LG(LC(LEFT)) &kp LG(LC(RIGHT))                            &kp LG(RBKT)  &kp LG(FSLH)   &none         &none                  &mo 3
       >;
     };
-    tmuxvim {
-      display-name = "Tmux & Vim";
+    stv {
+      display-name = "shell, tmux & vim";
       bindings = <
-        &none  &none  &none          &none          &none          &none      &none                                                                   &mo 1  &none      &none         &none                &none      &none  &none
-        &none  &none  &kp LC(LS(W))  &none          &kp LC(R)      &none      &none                                                                   &none  &none      &kp LC(U)     &tmux_copy_mode      &kp LC(O)  &none  &none
-        &none  &none  &none          &kp LC(D)      &none          &none      &none                 &none &none &none &none                           &none  &kp LC(H)  &kp LC(J)     &kp LC(K)            &kp LC(L)  &none  &none
-        &none  &none  &none          &kp LC(C)      &kp LC(V)      &kp LC(B)                              &none &none                                        &none      &tmux_leader  &tmux_sessions_list  &none      &none  &none
-        &mo 3  &none  &none          &vim_diag_next  &vim_diag_prev                             &none &none &none &none &tmux_win_left &tmux_win_right                    &kp LC(A)     &kp LC(E)            &none      &none  &mo 3
+        &none  &none  &none          &none           &none             &none      &none                                                                                 &mo 1             &none             &none          &none            &none              &tmux_swap_window_left  &tmux_swap_window_right
+        &none  &none  &kp LC(LS(W))  &none           &kp LC(R)         &none      &none                                                                                 &none             &none             &kp LC(U)      &tmux_copy_mode  &kp LC(O)          &none                   &none
+        &none  &none  &none          &kp LC(D)       &kp LG(LS(LC(T))) &none      &none                         &none &none &tmux_vsplit &tmux_hsplit                   &none             &kp LC(H)         &kp LC(J)      &kp LC(K)        &kp LC(L)          &none                   &none
+        &none  &none  &none          &kp LC(C)       &kp LC(V)         &kp LC(B)                                      &none &none                                                         &tmux_new_window  &tmux_command  &tmux_leader     &tmux_new_session  &none                   &none
+        &mo 3  &none  &none          &vim_diag_next  &vim_diag_prev                               &tmux_sessions_list &none &none &none &tmux_win_left &tmux_win_right                                      &kp LC(A)      &kp LC(E)        &none              &none                   &mo 3
+      >;
+    };
+    hypr {
+      display-name = "Hyprland";
+      bindings = <
+        &none  &kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4)) &kp LG(LC(N5))  &none                                                                        &mo 1  &kp LG(LC(N6))          &kp LG(LC(N7))        &kp LG(LC(N8))          &kp LG(LC(N9))        &kp LG(LC(N0))        &none
+        &none  &none           &none           &none           &none          &none           &none                                                                        &none  &hypr_win_toggle_float  &hypr_win_fullscreen  &hypr_win_toggle_split  &none                 &macro_open_1p         &none
+        &none  &none           &none           &none           &none          &none           &none                 &none &none &none &none                                &none  &hypr_move_win_left     &hypr_move_win_down   &hypr_move_win_up       &hypr_move_win_right  &macro_open_reminders  &none
+        &none  &none           &none           &none           &none          &none                                       &none &none                                             &none                   &none                 &none                   &none                 &none                  &none
+        &mo 3  &none           &none           &none           &mo 4                                 &macro_emoji &trans &trans &trans &kp LG(LC(LEFT)) &kp LG(LC(RIGHT))                                 &none                 &none                   &none                 &none                  &mo 3
       >;
     };
     extra1 { 
